@@ -1,0 +1,863 @@
+/* Container Geral da Seção */
+.container-artistas {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center; /* Alinha título e parágrafo */
+}
+
+.container-artistas h1 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.container-artistas p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Ajustes do Carrossel */
+#carouselExampleCaptions {
+    max-width: 500px; /* Largura da imagem */
+    margin: 0 auto;
+    position: relative;
+}
+
+.img-container img {
+    height: 450px; /* Altura padrão para as fotos de tattoo */
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Legenda abaixo da imagem */
+.carousel-caption-custom {
+    padding: 20px 0;
+    color: #222;
+}
+
+.carousel-caption-custom h5 {
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Movendo as setas para fora */
+.carousel-control-prev, 
+.carousel-control-next {
+    width: 50px;
+    height: 450px; /* Alinha com a altura da imagem */
+    position: absolute;
+    top: 0;
+}
+
+.carousel-control-prev { left: -70px; }
+.carousel-control-next { right: -70px; }
+
+/* Estilo das setas (pretas e redondas) */
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+    background-color: #000;
+    border-radius: 50%;
+    padding: 15px;
+    background-size: 50%;
+}
+
+.welcome-section {
+    padding: 80px 20px; /* Espaçamento grande em cima e embaixo para respirar */
+    text-align: center;
+}
+
+.welcome-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.welcome-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 40px;
+    /* Evita que o texto ocupe a tela toda no PC, o que dificulta a leitura */
+    text-align: center; 
+}
+
+.welcome-section img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    /* Como é um print do Insta, um arredondado e sombra dão um toque premium */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.hero-cta {
+    color: #D1D1D1; /* Cinza claro inicial */
+    font-weight: 500;
+    margin-top: 20px;
+    display: inline-block; /* Necessário para o efeito de aumento (scale) */
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.hero-cta:hover {
+    color: #FFFFFF !important; /* Branco puro no destaque */
+    transform: scale(1.1); /* Aumenta 10% para dar o "estalo" visual */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Um brilho leve ao fundo */
+}
+
+.hero-section {
+    /* Substitua pelo caminho correto da sua imagem de fundo */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                      url('Assets/studio/studio.jpeg');
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efeito Parallax suave */
+    
+    height: 100vh; /* Ocupa 100% da altura da tela */
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+/* Centraliza o texto no meio da imagem */
+.hero-content {
+    margin: auto;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Estilização Geral da Barra de Navegação */
+/* NAVBAR: Apenas a barra preta no topo */
+.navbar {
+    background-color: #000000 !important;
+    padding: 10px 0;
+    width: 100%;
+    z-index: 2000; /* Aumentamos para garantir que fique no topo de tudo */
+}
+
+.navbar-nav .nav-link {
+    color: #D1D1D1 !important;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 0.5rem 1rem !important;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+    color: #FFFFFF !important;
+    transform: scale(1.15);
+}
+
+
+
+/* Ajuste para que todas as fotos da galeria tenham o mesmo tamanho sem distorcer */
+.portfolio-card img {
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+.portfolio-card {
+    border: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Sombra bem leve e profissional */
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+/* Efeito de zoom na imagem ao passar o mouse */
+.portfolio-card:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-card .card-body {
+    padding: 15px;
+    background-color: #fff;
+}
+
+.portfolio-card .card-text {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;      /* Distância do fundo */
+    right: 30px;       /* Distância da direita */
+    width: 60px;
+    height: 60px;
+    z-index: 9999;     /* Garante que fique acima de carrosséis e menus */
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-btn img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3)); /* Sombra profissional */
+}
+
+/* Efeito de aumentar ao passar o mouse */
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Opcional: Badge vermelha (como na sua referência) */
+.badge-notify {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ff0000;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 7px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* --- TÍTULO H1 --- */
+.piercer-main-title {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    /* Cor cinza claro inicial que você pediu */
+    color: #000; 
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: default;
+}
+/* --- O LAYOUT EM GRID --- */
+.piercer-grid-layout {
+    display: grid;
+    /* Define 2 colunas: a da esquerda é ligeiramente mais larga (1.2fr) que a da direita (1fr) para destaque */
+    grid-template-columns: 1.2fr 1fr;
+    /* Define 2 linhas de altura igual */
+    grid-template-rows: 1fr 1fr;
+    /* Espaçamento entre as fotos */
+    gap: 15px;
+    /* Altura total da área das fotos. Ajuste se achar muito alto ou baixo */
+    height: 500px; 
+    max-width: 900px;
+    margin: 0 auto; /* Centraliza o grid na tela */
+}
+
+/* Configuração das Células do Grid */
+.piercer-main-photo {
+    grid-row: 1 / span 2; /* Ocupa da linha 1 até a 2 (span 2) na coluna da esquerda */
+    position: relative; /* Para posicionar o nome dela */
+}
+
+.piercer-work-top {
+    grid-row: 1 / 2; /* Ocupa apenas a primeira linha da coluna da direita */
+}
+
+.piercer-work-bottom {
+    grid-row: 2 / 3; /* Ocupa apenas a segunda linha da coluna da direita */
+}
+
+/* Estilo Padrão para TODAS as imagens dentro do grid */
+.piercer-grid-layout div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a foto preencha o espaço sem distorcer */
+    border-radius: 12px; /* Bordas arredondadas profissionais */
+    transition: transform 0.3s ease;
+}
+
+/* --- EFEITOS VISUAIS (Opcional, mas recomendado) --- */
+
+/* Nome da Piercer sobre a foto */
+.piercer-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8)); /* Degradê escuro para ler o texto */
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.piercer-info h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Efeito de Zoom Suave ao passar o mouse */
+.item-hover {
+    overflow: hidden; /* Impede que a imagem saia do quadrado no zoom */
+    border-radius: 12px;
+}
+
+.item-hover:hover img {
+    transform: scale(1.05); /* Aumenta 5% */
+}
+
+/* --- TÍTULO DO WORKSHOP --- */
+.workshop-title {
+    color: #000;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+
+/* --- MOLDURA DO WORKSHOP (REVISADA) --- */
+.workshop-hero-container {
+    width: 100%;
+    height: auto;           /* REMOVIDO os 600px fixos para o container seguir a imagem */
+    max-width: 1000px;      /* Define um limite para não ficar "muito grande" em telas enormes */
+    margin: 0 auto 4rem auto; /* Centraliza o container e dá o respiro embaixo */
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: transparent; /* Remove o fundo preto que criava as barras */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1); /* Sombra mais suave */
+}
+
+.img-workshop-full {
+    width: 100%;            /* A imagem ocupa toda a largura do container */
+    height: auto;           /* A altura se ajusta sozinha proporcionalmente */
+    display: block;         /* Remove espaços vazios abaixo da imagem */
+    object-fit: contain;    /* Garante que ela seja exibida inteira */
+}
+
+/* --- O SEGREDO: FUNDO BORRADO --- */
+/* Isso cria uma camada atrás da imagem usando a própria imagem esticada e desfocada */
+.workshop-hero-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Assets/WhatsApp Image 2026-01-14 at 19.48.08(1).jpeg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(15px); /* Desfoque das laterais */
+    opacity: 0.4; /* Deixa o fundo sutil */
+    z-index: 1;
+}
+
+/* --- A IMAGEM PRINCIPAL (SEM CORTES) --- */
+.img-workshop-full {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* GARANTE QUE NÃO CORTA NADA */
+    position: relative;
+    z-index: 2; /* Fica na frente do borrado */
+    transition: transform 0.5s ease;
+}
+
+.workshop-hero-container:hover .img-workshop-full {
+    transform: scale(1.02);
+}
+
+/* --- AJUSTE PARA O H1 NÃO SUMIR --- */
+.workshop-side-title {
+    color: #000;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 0; 
+    padding-top: 0;
+    font-size: 2rem;
+    line-height: 1.2;
+    transition: color 0.3s ease;
+    /* Adicionamos position e z-index para garantir que ele fique na frente da sombra da imagem de cima */
+    position: relative;
+    z-index: 10; 
+}
+
+
+/* Garante que o container de texto não tenha padding superior que empurre o título */
+.workshop-text-box {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* --- AJUSTE DE ESPAÇAMENTO H2 -> PARÁGRAFO --- */
+.workshop-text-box h2 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px !important; /* Reduzido drasticamente */
+    color: #FFFFFF;
+}
+
+.workshop-text-box p {
+    color: #000; /* Voltei para o cinza claro do seu padrão */
+    font-size: 1.1rem;
+    letter-spacing: 0.05rem; 
+    word-spacing: 0.15rem;
+    line-height: 1.8; 
+    text-align: justify;
+    margin-top: 0 !important; /* Removido o espaço do topo para colar no H2 */
+    margin-bottom: 25px;
+}
+.btn-workshop {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 2px solid #000;
+    color: #000;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+    background-color: transparent; /* Garante que o fundo comece vazio */
+}
+
+/* Efeito ao passar o mouse */
+.btn-workshop:hover {
+    background-color: #000000; /* Fundo fica preto */
+    color: #FFFFFF;            /* Letras ficam brancas */
+    border-color: #000000;     /* Garante que a borda acompanhe a cor */
+}
+/* --- BOTÃO CENTRALIZADO --- */
+.btn-container-central {
+    display: flex;
+    justify-content: center; /* Centraliza o botão no bloco de texto */
+    width: 100%;
+    margin-top: auto; /* Empurra para o fim se a div for flex-column */
+    padding-top: 20px;
+}
+
+/* Container Principal do Rodapé */
+.footer-site {
+    background-color: #000000; /* Fundo Preto */
+    width: 100%;               /* Largura Inteira */
+    padding: 40px 0 20px 0;    /* Espaçamento interno */
+    border-top: 1px solid #222; /* Linha sutil no topo para separar do conteúdo */
+    margin-top: 50px;
+}
+
+/* Estilo dos Links do Rodapé */
+.nav-link-footer {
+    color: #D1D1D1; /* Cinza claro inicial */
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0 15px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-link-footer:hover {
+    color: #FFFFFF; /* Branco puro no destaque */
+}
+
+/* Texto de Direitos Reservados */
+.footer-rights {
+    color: #FFFFFF;
+    font-size: 0.85rem;
+    margin-top: 20px;
+}
+
+/* Linha divisória interna */
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.1);
+    max-width: 80%;
+    margin: 20px auto;
+}
+
+/* --- CSS do Footer Responsivo --- */
+
+/* Estilo Base (Para Celulares) */
+.footer-header-container {
+    position: relative;
+    /* No celular, usamos flex column para empilhar logo e links */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.footer-logo {
+    /* No celular, ela não é absoluta, ela ocupa espaço real */
+    position: static; 
+    /* Um tamanho bom para celular, pode ajustar se quiser */
+    height: 80px; 
+    width: auto;
+    margin-bottom: 15px; /* Espaço entre logo e links no celular */
+}
+
+/* Estilo para Desktop (Telas maiores que 768px) */
+@media (min-width: 768px) {
+    .footer-header-container {
+        /* Volta a ser uma linha normal */
+        display: block;
+        /* Altura mínima para garantir espaço para a logo grande */
+        min-height: 150px;
+        /* Centraliza os links verticalmente */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-logo {
+        /* Aqui a mágica acontece: ela vira absoluta só no desktop */
+        position: absolute;
+        left: 0;
+        /* O tamanho grande que você quer no desktop */
+        height: 150px; 
+        margin-bottom: 0;
+        z-index: 10;
+    }
+}
+
+
+
+/* Responsividade (Modo Celular) */
+@media (max-width: 768px) {
+    .nav-link-footer {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+/* --- AJUSTE MOBILE --- */
+@media (max-width: 768px) {
+    .workshop-hero-container {
+        height: 400px; /* No celular a caixa fica menor para caber na tela */
+    }
+
+    .workshop-title {
+        font-size: 1.5rem;
+    }
+
+    .workshop-text-box {
+        text-align: center;
+        padding: 0 15px;
+    }
+}
+/* Animação de pulso (Opcional - dá um ar premium) */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.whatsapp-btn {
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+/* ==========================================================
+   RESPONSIVIDADE (TABLETS E CELULARES)
+   ========================================================== */
+
+@media (max-width: 991px) {
+    /* NAVBAR MOBILE */
+    .navbar-collapse {
+        background-color: #000000 !important;
+        padding: 20px;
+        border-radius: 0 0 10px 10px;
+        margin-top: 10px;
+        position: relative;
+        z-index: 3000; /* Maior que o conteúdo da Hero */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+
+ .navbar-nav .nav-link {
+        display: block !important; /* Muda para block no celular para ocupar a linha */
+        width: 100%;
+        color: #D1D1D1 !important;
+        padding: 15px 0 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        opacity: 1 !important; /* Garante que não fiquem transparentes */
+        visibility: visible !important;
+    }
+
+    /* HERO SECTION */
+    .hero-content h1 {
+        font-size: 2.5rem; /* Diminui o título principal no celular */
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* SEÇÃO BEM-VINDO */
+    .welcome-section {
+        padding: 40px 15px; /* Reduz o respiro para ganhar tela */
+    }
+
+    .welcome-section h1 {
+        font-size: 1.8rem;
+    }
+
+    /* CARROSSEL DE ARTISTAS */
+    #carouselExampleCaptions {
+        max-width: 100%; /* Ocupa a largura total */
+    }
+
+    .img-container img {
+        height: 350px; /* Reduz a altura da foto no celular */
+    }
+
+    /* Trazer as setas para DENTRO da imagem no celular */
+    .carousel-control-prev { left: 5px; width: 40px; }
+    .carousel-control-next { right: 5px; width: 40px; }
+    
+    .carousel-control-prev, .carousel-control-next {
+        height: 350px; /* Alinha com a nova altura da imagem */
+    }
+
+    /* GRID DA BODY PIERCER */
+    .piercer-grid-layout {
+        grid-template-columns: 1fr; /* Transforma em uma única coluna */
+        grid-template-rows: auto;    /* Altura automática baseada no conteúdo */
+        height: auto;               /* Remove a altura fixa de 500px */
+        gap: 15px;
+    }
+
+    .piercer-main-photo {
+        grid-row: auto; /* Para de ocupar 2 linhas */
+        height: 400px;
+    }
+
+    .piercer-work-top, .piercer-work-bottom {
+        height: 250px; /* Altura fixa para os trabalhos não sumirem */
+    }
+
+    /* WHATSAPP FLOAT */
+    .whatsapp-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+
+
+/* ==========================================================
+   AJUSTE DE ORDEM PARA CELULAR E TABLET
+   ========================================================== */
+
+@media (max-width: 991px) {
+    .piercer-grid-layout {
+        display: grid;
+        grid-template-columns: 1fr; /* Uma única coluna */
+        grid-template-rows: auto;    /* Altura automática */
+        height: auto;
+        gap: 20px;
+    }
+
+    /* Forçamos a ordem dos itens no grid */
+    .piercer-main-photo {
+        grid-row: auto; /* Resetamos o span 2 do desktop */
+        order: 1;       /* Fica no topo (primeiro) */
+        height: 450px;  /* Ajuste a altura conforme preferir */
+    }
+
+    .piercer-work-top {
+        grid-row: auto;
+        order: 2;       /* Fica em segundo */
+        height: 280px;
+    }
+
+    .piercer-work-bottom {
+        grid-row: auto;
+        order: 3;       /* Fica em terceiro */
+        height: 280px;
+    }
+
+    .piercer-main-title {
+        font-size: 2rem; /* Ajuste para o título não ficar gigante */
+    }
+}}
+
+/* AJUSTES PARA CELULARES MUITO PEQUENOS (iPhone SE, etc) */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-cta {
+        font-size: 1.1rem;
+    }
+}
+
+/* Força a visibilidade no modo celular */
+@media (max-width: 991px) {
+    .navbar-collapse.show .nav-link {
+        color: #D1D1D1 !important; /* Cinza claro */
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    /* Garante que o fundo preto não cubra o texto */
+    .navbar-collapse {
+        z-index: 9999 !important;
+        background-color: #000 !important;
+    }
+}
+
+/* ==========================================================
+   1. ESTILOS GERAIS (MOBILE FIRST / BASE)
+   ========================================================== */
+
+/* Botão WhatsApp */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 9999;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-btn img {
+    width: 100%;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* Navbar Base */
+.navbar {
+    background-color: #000 !important;
+    z-index: 2000;
+}
+
+/* ==========================================================
+   2. DISPOSITIVOS MÓVEIS (Extra Small < 576px)
+   ========================================================== */
+@media (max-width: 575.98px) {
+    .hero-content h1 { font-size: 1.8rem; letter-spacing: 2px; }
+    .hero-cta { font-size: 1rem; }
+    
+    .welcome-section h1 { font-size: 1.6rem; }
+    
+    .img-container img { height: 300px; }
+    .carousel-control-prev, .carousel-control-next { height: 300px; width: 35px; }
+
+    .workshop-side-title { font-size: 1.5rem; text-align: center; }
+    .workshop-hero-container { height: auto; }
+}
+
+/* ==========================================================
+   3. TABLETS (Small & Medium: 576px a 991px)
+   ========================================================== */
+@media (max-width: 991.98px) {
+    /* Navbar Mobile Menu */
+    .navbar-collapse {
+        background-color: #000;
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 12px 0 !important;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Grid do Piercer vira coluna única */
+    .piercer-grid-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto;
+        gap: 20px;
+    }
+
+    .piercer-main-photo { order: 1; height: 400px; }
+    .piercer-work-top { order: 2; height: 280px; }
+    .piercer-work-bottom { order: 3; height: 280px; }
+
+    /* Setas do Carrossel para dentro */
+    .carousel-control-prev { left: 0; }
+    .carousel-control-next { right: 0; }
+}
+
+/* ==========================================================
+   4. NOTEBOOKS (Large: 992px a 1199px)
+   ========================================================== */
+@media (min-width: 992px) {
+    .container-artistas { max-width: 800px; }
+    
+    /* Setas para fora apenas em telas grandes */
+    .carousel-control-prev { left: -80px; }
+    .carousel-control-next { right: -80px; }
+    
+    .hero-content h1 { font-size: 3.5rem; }
+
+    /* Piercer Grid - Layout Desktop */
+    .piercer-grid-layout {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 550px;
+    }
+}
+
+/* ==========================================================
+   5. DESKTOPS / TELAS GRANDES (XL & XXL: > 1200px)
+   ========================================================== */
+@media (min-width: 1200px) {
+    .workshop-hero-container {
+        max-width: 1100px;
+    }
+    
+    .welcome-section p {
+        padding: 0 15%; /* Texto mais centralizado em telas gigantes */
+    }
+
+    /* Footer Logo Absoluta */
+    .footer-header-container {
+        position: relative;
+        min-height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-logo {
+        position: absolute;
+        left: 0;
+        height: 150px;
+    }
+}
+
+/* ==========================================================
+   6. CLASSES DE UTILIDADE (Para usar no HTML com Bootstrap)
+   ========================================================== */
+
+/* Mantendo seus efeitos de hover que não existem no Bootstrap nativo */
+.item-hover {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.item-hover:hover img {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+.portfolio-card img {
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.05);
+}
